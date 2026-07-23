@@ -36,7 +36,9 @@ Este repositorio contiene el flujo de análisis completo para 3 datasets. Sigue 
 Ejecuta en tu terminal para clonar el repositorio, crear el entorno virtual e instalar las librerías necesarias:
 
 ```bash
-git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
+git clone
+[https://github.com/galexter/Proyecto-6---An-lisis-de-la-empresa-ConnectaTel.git]
+(https://github.com/galexter/Proyecto-6---An-lisis-de-la-empresa-ConnectaTel.git)
 cd tu-repositorio
 python -m venv venv && source venv/bin/activate  # En Windows usa: venv\Scripts\activate
 pip install -r requirements.txt
@@ -51,9 +53,14 @@ Asegúrate de tener los archivos `.csv` en la carpeta `/data`:
 ### 3. Ejecución del flujo
 Corre los notebooks en la carpeta `/notebooks` en orden secuencial:
 
-1. `01_limpieza.ipynb` → Carga, limpia y une los 3 datasets.
-2. `02_eda.ipynb` → Genera estadísticas descriptivas y visualizaciones.
-3. `03_conclusiones.ipynb` → Extrae métricas finales y hallazgos.
+1. Cargar y explorar →	Cargar y explorar plans, users_latam, usage
+2. Identificación de problemas de calidad	→ Contar nulos, detectar sentinels, revisar fechas fuera de rango.
+3. Limpieza básica → Reemplazar sentinels, convertir fechas, imputar o marcar NA según reglas.
+4. Summary statistics	→ Revisar las medidas clave en variables categóricas y numéricas.	Medidas clave (media, mediana, percentiles) que muestran el comportamiento típico y extremo
+5. Visualización & outliers	→ Creación de histogramas y boxplots.	Visualización de sesgos, patrones de usuarios o datos atípicos.
+6. Segmentación	→ Crear segmentaciones basadas en reglas claras; visualizar proporciones con countplots.
+7. Insight ejecutivo	→ Redactar conclusiones y recomendaciones comerciales basadas en los pasos anteriores.
+8. Publicación	→ Subir tu notebook + README a GitHub.	Entrega reproducible para revisión y ejecución por stakeholders.
 
 
 
